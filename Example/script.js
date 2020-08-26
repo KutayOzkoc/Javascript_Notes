@@ -90,8 +90,8 @@ function showScore(){
 }
 
 function showProgress(){
-    var questionnotot = quiz.questionarr.length;
+    var questionnoto = quiz.questionarr.length;
     var questionno = quiz.qindex+1;
-    document.querySelector('#progress').innerHTML = questionno + " of " + questionnotot;
+    document.querySelector('#progress').innerHTML = questionno + " of " + questionnoto;
     
 }
