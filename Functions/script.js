@@ -54,3 +54,63 @@ function welcome(){
 console.log(welcome());
 
 
+
+//Function that returns Function
+
+
+function question (hobbies){
+    switch (hobbies) {
+        case "Car":
+            return function(name){
+                console.log(name + " Do you have a car ? ");
+            }
+            break;
+        case "Technology":
+            return function(name){
+                console.log(name + " Do you have a Computer ? ");
+            }
+        
+            break;
+        default:
+
+            console.log("No Hobbies");
+            break;
+    }
+
+
+}
+
+var questioncar = question("Car"); // It understand there go to car case 
+questioncar("Kutay"); // there it want name parameter.
+
+
+//Getter and Setters
+
+const person = {
+    name:"Kutay",
+    lastname:"Ozkoc",
+   
+    get fullname(){
+        return this.name+this.lastname;
+    },
+
+    set fullname(value){
+        const parts = value.split(' ');
+        this.name = parts[0];
+        this.lastname = parts[1];
+
+    }
+
+
+   
+};
+
+Object.defineProperty(person,'age',{ // we can use defineProperty for getter setter methods
+    writable : true // if its true we can use set method for age.
+});
+
+
+person.fullname = "Mehmet Özkoç";
+console.log(person.name + person.lastname);
+console.log(person.fullname);
+console.log(person.age);
