@@ -203,8 +203,8 @@ document.getElementById('btn').addEventListener('click',function(e){
         }
 
     }
-    catch(err){
-        error.innerHTML = err.message; 
+    catch(erro){
+        error.innerHTML = erro.message; 
     }
     finally{
         age.value = '';
