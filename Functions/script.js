@@ -106,6 +106,7 @@ const person = {
 };
 
 Object.defineProperty(person,'age',{ // we can use defineProperty for getter setter methods
+    value : 50,
     writable : true // if its true we can use set method for age.
 });
 
@@ -114,3 +115,46 @@ person.fullname = "Mehmet Özkoç";
 console.log(person.name + person.lastname);
 console.log(person.fullname);
 console.log(person.age);
+
+
+
+// Call apply Bind
+
+var welcome = function(a){
+    console.log("Welcome " + this.name + " You like " + a);
+}
+
+
+var kutay = {name : 'Kutay'}; 
+welcome.call(kutay,"Vue"); // We call our function with given variable. we can give parameter directly
+welcome.apply(kutay,["Angular"]); // Different is this give array to our function.
+
+welcomekutay = welcome.bind(kutay); // bind return new function
+
+welcomekutay("React"); // If we use bind we need to give parameter there. 
+
+
+//Example for Call Apply Bind Numaric Range
+
+var num = {
+    min : 0,
+    max : 100,
+    checkRange : function(value){
+        if(typeof value !== 'number'){
+            return false;
+        }
+        else {
+            return value >= this.min && value <= this.max; 
+        }
+    }
+}
+
+console.log(num.checkRange(-20));
+console.log(num.checkRange(20));
+
+var num1 = {max:20,min:10};
+
+console.log(num.checkRange.call(num1,15)); // we give num1 parameter for set max min in first parameter
+                                           // then we give a number in second parameter for check number.
+
+console.log(num.checkRange.apply(num1,[25]));
