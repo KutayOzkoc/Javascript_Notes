@@ -51,7 +51,6 @@ function welcome(){
     console.log(msgI);
 }());//this brackets says what is the value of this parameters
 
-
 console.log(welcome());
 
 
