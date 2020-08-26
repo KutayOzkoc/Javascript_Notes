@@ -158,3 +158,59 @@ console.log(num.checkRange.call(num1,15)); // we give num1 parameter for set max
                                            // then we give a number in second parameter for check number.
 
 console.log(num.checkRange.apply(num1,[25]));
+
+
+//Try Catch Error Handling mechanism this mechanism dont stop your program run but you can see your error.s 
+
+try {
+    //Code here where you will control
+
+    console.log(p);
+    if(!person.email){
+        throw new Error('No Email'); // you can throw your own error for control something
+    }    
+}
+
+catch(e){
+    //you can catch your error here
+
+    console.log(e.message);
+}
+
+
+//Error Handling Example 
+
+
+document.getElementById('btn').addEventListener('click',function(e){
+
+    var name = document.getElementById('name');
+    var surname = document.getElementById('surname');
+    var age = document.getElementById('age');
+    var error = document.getElementById('errordivision');
+
+
+    try{
+        if(name.value.length === 0){
+            throw new Error("No name error!!!");
+        }
+
+        if(surname.value.length === 0){
+            throw new Error("No surname error!!!");
+        }
+
+        if(age.value < 20){
+            throw new Error("You are too young for enter this site!!");
+        }
+
+    }
+    catch(err){
+        error.innerHTML = err.message; 
+    }
+    finally{
+        age.value = '';
+    }
+    
+
+    e.preventDefault();
+
+});
