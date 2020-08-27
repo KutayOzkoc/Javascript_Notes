@@ -236,8 +236,33 @@ class Person{ // We dont need prototype for inheritance
     jobanalyzer(){
         return this.job;
     }
+
+    static sayHi(){
+        console.log("Hello");
+    }
 }
 
 let Burak = new Person("Burak","Engineer");
 
 console.log(Burak.jobanalyzer());
+
+Person.sayHi();
+
+class Dist{
+    constructor(x,y){
+        this.x = x;
+        this.y = y;
+    }
+    static Distance(a,b){ // this is static method and we can only access it with our class name
+        var dx = a.x-b.y;
+        var dy = a.y-b.x;
+
+        console.log(Math.hypot(dx,dy));
+
+    }
+};
+
+var d1 = new Dist(3,0);
+var d2 = new Dist(4,0);
+
+Dist.Distance(d1,d2);
