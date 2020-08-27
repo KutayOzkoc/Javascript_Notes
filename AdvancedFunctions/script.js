@@ -59,3 +59,72 @@ var list2 = {
 list2.call();
 
 
+//Spread Operators It helps for us send array to function directly
+
+let array = [1,2,3];
+let array2 = [10,11,12];
+
+array.push(...array2); //There we can add array2 after array
+
+console.log(array);
+
+var tag1 = document.getElementById('First');
+var tag2 = document.querySelectorAll('div');
+
+var tags = [tag1,...tag2]; // We select to point for manipulate between them
+
+tags.forEach(tag => tag.style.color = 'red'); // Change text colors
+
+
+//Rest parameters
+let numberarr;
+function Sum(...numberarr){
+    let result = 0;
+    numberarr.forEach(item => result += item);
+    return result;
+    
+}
+
+console.log(Sum(10,20,30));
+
+
+
+
+function checkDriver(age,...birth){
+    birth.forEach(items => console.log(2020-items < age)) // we use each index in item and calculate it
+}
+
+checkDriver(1999,2012,1992,1998,18); // 19 is rest parameter rest parameter not like year it select year for take driver license.
+
+
+//Destructuring
+
+
+let a,b,rest;
+
+a = 10;
+b = 20;
+
+[a,b,...rest] = [40,50,10,20,100];
+console.log(a);
+console.log(b);
+console.log(rest); // first to goes to a and b then other 3 goes to rest
+
+
+let config = ["Local",5000,900];
+
+
+let {server,port = 1000,time} = config;
+
+
+console.log(port); // We can change value in our parameter
+
+const obj = {
+    name : "Ali",
+    age : 50
+}
+
+const {name,age} = obj;
+
+console.log(name);
+
