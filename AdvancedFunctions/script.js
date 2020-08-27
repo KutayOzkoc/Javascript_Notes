@@ -128,3 +128,72 @@ const {name,age} = obj;
 
 console.log(name);
 
+
+const boxes = document.querySelectorAll(".box");
+
+Array.from(boxes).forEach(items => items.style.backgroundColor ="green");
+
+let team = "Besiktas";
+
+let letters = Array.from(team);
+console.log(letters);
+
+
+let students = [
+    {name:"Kutay",point:200},
+    {name:"Ali",point:210},
+    {name:"Ahmet",point:250}
+
+];
+
+let studentFinder = students.find(prd => {
+    if(prd.name == "Kutay"){
+        console.log("Kutay " + prd.point);
+    }
+    else if(prd.name == "Ahmet"){
+        console.log("Ahmet " + prd.point);
+    }
+    else{
+        console.log("Ali " + prd.point);
+    }
+})
+
+//Maps
+
+let val = new Map(); // val is our instance
+
+val.set(1,'one');//First key value second value
+val.set(2,"two");
+val.set(3,"three")
+
+console.log(val);
+console.log(val.get(1)); // We can get value which is key number 1;
+val.delete(3);//We can delete element with delete method but using key for point.
+
+let siz = val.size;
+console.log(siz); // here we can take a size of instance
+
+if(val.has(1)){
+    console.log("This instance has 1 key to hold value");
+}
+
+for (var [key,value] of val){
+    console.log(key + " "+value);
+}
+
+let first = new Map([
+    [1,"one"],
+    [2,"two"],
+    [3,"three"],
+    [4,"Four"]
+]);
+let second = new Map([
+    [5,"five"],
+    [6,"six"],
+    [7,"seven"],
+]);
+
+let marged = new Map([...first,...second]);
+
+console.log(marged);
+
