@@ -197,3 +197,47 @@ let marged = new Map([...first,...second]);
 
 console.log(marged);
 
+
+
+//Sets Object (For hold unique values)
+
+
+let set = new Set();
+set.add(1);
+set.add(2);
+set.add(2);// We cant add two value with same key value
+
+// We can use same methods like in Map objects
+
+
+for (var [key,value] of set.entries()){
+    console.log(key + " " + value);
+}
+
+//Intersect
+
+let set2 = new Set([2,5]);
+
+console.log(Array.from(set).filter(x => set2.has(x)));
+
+//Difference
+
+console.log(Array.from(set).filter(x => !set2.has(x)));
+
+
+//Classes in ES6
+
+class Person{ // We dont need prototype for inheritance
+    constructor(name,job){
+        this.name = name;
+        this.job = job;
+    }
+
+    jobanalyzer(){
+        return this.job;
+    }
+}
+
+let Burak = new Person("Burak","Engineer");
+
+console.log(Burak.jobanalyzer());
