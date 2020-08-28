@@ -1,0 +1,19 @@
+[
+    {
+        "firstname":"kutay",
+        "lastname":"ozkoc",
+        "job":"Engineer"
+    },
+
+    {
+        "firstname":"Ahmet",
+        "lastname":"ozkoc",
+        "job":"Engineer"
+    },
+
+    {
+        "firstname":"Gul",
+        "lastname":"ozkoc",
+        "job":"Engineer"
+    }
+]

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<style>
+    #loading{
+        
+        display: none;
+    }
+
+</style>
+<body>
+    <h1 class="ml-5">Async</h1>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" id="getemployee">Get Employee</button>
+                <button class="btn btn-success"id="getemployees">Get employees</button>
+                <div id="loading"><img src="/Async/img/giphy.gif" alt=""></div>
+                
+                <table  class="mt-3 class = table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Job</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="employees">
+
+
+
+                    </tbody>
+                    <tr></tr>
+                    
+
+
+                </table>
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="/Async/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+</body>
+
+</html>
